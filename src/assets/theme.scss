@@ -1,0 +1,29 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+$tk-rojo: rgb(254, 44, 85);
+$tk-outline: rgba(22, 24, 35, 0.12);
+$tk-disable: rgba(22, 24, 35, 0.06);
+$tk-gray: rgba(22, 24, 35, 0.34);
+
+$tk-font-family: 'Roboto', sans-serif;
+
+$tk-font-smallest: 0.75rem;
+$tk-font-tiny: 0.8rem;
+$tk-font-normal: 1rem;
+$tk-font-medium: 1.2rem;
+
+$tk-radious-normal: 5.75rem;
+$tk-separator: 0.00125rem solid $tk-outline;
+
+*{
+  font-family: $tk-font-family;
+  font-size: $tk-font-normal;
+}
+
+.tk-separator{
+  width: 80%;
+  border: $tk-separator;
+}
+
+

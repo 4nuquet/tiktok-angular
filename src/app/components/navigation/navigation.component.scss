@@ -1,0 +1,18 @@
+@import "../../../assets/theme.scss";
+
+.tk-navigation {
+  &__item {
+    line-height: normal;
+    font-size: $tk-font-medium;
+    color: #000;
+    width: 21rem;
+    height: 3rem;
+    i{
+      font-size: $tk-font-medium;
+    }
+    &--active{
+      color: $tk-rojo;
+    }
+  }
+
+}

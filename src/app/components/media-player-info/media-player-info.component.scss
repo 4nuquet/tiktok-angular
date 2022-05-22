@@ -1,0 +1,39 @@
+@import '../../../assets/theme.scss';
+
+.tk-player-info{
+
+  &__avatar{
+    img{
+      margin-top: -3.5rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+    }
+  }
+  &__user{
+    &--username{
+      font-size: $tk-font-normal;
+      font-weight: 700;
+    }
+    &--name{
+      font-size: $tk-font-smallest;
+      color: $tk-gray;
+    }
+
+    &--check{
+      color: rgb(32 213 236);
+    }
+
+    &--follow{
+      border-color: $tk-rojo;
+      color: $tk-rojo;
+      &:hover{
+        background-color: $tk-rojo;
+        color: #fff;
+      }
+    }
+  }
+  &__song{
+
+  }
+}

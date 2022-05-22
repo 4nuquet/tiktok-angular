@@ -1,0 +1,21 @@
+@import "../../../assets/theme.scss";
+
+.tk-discover {
+  &__title {
+    font-size: $tk-font-tiny;
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 600;
+  }
+
+  &__trending {
+    padding: 0.18rem 0.625rem;
+    color: $tk-gray;
+    border: 1px solid $tk-outline;
+    span {
+      font-size: $tk-font-smallest;
+    }
+    i {
+      color: #000;
+    }
+  }
+}

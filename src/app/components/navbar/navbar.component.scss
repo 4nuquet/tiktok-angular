@@ -10,25 +10,22 @@
     input{
       background-color: $tk-disable;
       font-size: $tk-font-tiny;
-      border-top-left-radius: $tk-radious-normal;
-      border-bottom-left-radius: $tk-radious-normal;
+      border-top-left-radius: $tk-radius-normal;
+      border-bottom-left-radius: $tk-radius-normal;
     }
     span{
       background-color: $tk-disable;
       color: $tk-gray;
       border-left-width: 70% ;
-      border-top-right-radius: $tk-radious-normal;
-      border-bottom-right-radius: $tk-radious-normal;
+      border-top-right-radius: $tk-radius-normal;
+      border-bottom-right-radius: $tk-radius-normal;
     }
   }
   &__actions{
     &--load{
-      padding: 0.3rem !important;
-      font-size: $tk-font-tiny;
       border: 1px solid $tk-outline !important;
     }
     &--login{
-      padding: 0.3rem !important;
       font-size: $tk-font-tiny;
       color: #fff;
       background: $tk-rojo;

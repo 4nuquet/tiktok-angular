@@ -1,12 +1,12 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-discover',
-  templateUrl: './discover.component.html',
-  styleUrls: ['./discover.component.scss'],
+  selector: 'app-media-player',
+  templateUrl: './media-player.component.html',
+  styleUrls: ['./media-player.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DiscoverComponent implements OnInit {
+export class MediaPlayerComponent implements OnInit {
 
   constructor() { }
 

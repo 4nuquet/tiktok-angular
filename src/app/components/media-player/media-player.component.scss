@@ -1,0 +1,55 @@
+@import "../../../assets/theme.scss";
+
+.tk-media-player {
+  &__player {
+    border-radius: $tk-radius-video;
+    margin-left: 4.5rem;
+    height: 25rem;
+    video {
+      border-radius: $tk-radius-video;
+      width: 16rem;
+    }
+  }
+
+  &__controls{
+   width: 16rem;
+   height: 25rem;
+    z-index: 1;
+    display: block;
+    position: absolute;
+
+    &--report{
+      font-size: $tk-font-smallest !important;
+      color: #fff;
+      span{
+        font-size: $tk-font-tiny !important;
+      }
+
+    }
+    &--play {
+
+    }
+    &--mute {
+
+    }
+  &--icons{
+    color: #fff;
+    font-size: $tk-font-big;
+  }
+  }
+
+  &__reactions{
+
+    button{
+      border-radius: 50%;
+      background-color: $tk-disable;
+    }
+      i{
+        font-size: $tk-font-big
+      }
+
+    &--quantity{
+      font-size: $tk-font-smallest;
+    }
+  }
+}

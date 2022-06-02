@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  rickAndMorty: 'https://rickandmortyapi.com/api/character'
+  rickAndMorty: 'https://rickandmortyapi.com/api',
 };
 
 /*

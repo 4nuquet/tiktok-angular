@@ -1,19 +1,18 @@
-<div class="tk-following">
-  <div class="tk-following__title mt-4">Cuentas sugeridas</div>
-  <div class="d-flex flex-row">
+<div class="tk-following" *ngIf="suggestions">
+  <div class="tk-following__title mt-4 mb-1">Cuentas sugeridas</div>
+  <div *ngFor="let item of suggestions" class="d-flex flex-row">
     <span class="tk-following__avatar d-flex align-items-center">
-      <img
-        src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/29b3d626b82df51d6ce5eef90cfb75fc~c5_100x100.jpeg?x-expires=1653408000&x-signature=W5MQwk%2FZtTaIYMmCBiQmnhu4WaA%3D"
-        alt=""
-        srcset=""
-      />
+      <img [src]="item.image" alt="" srcset="" />
     </span>
 
     <div
       class="tk-following__user d-flex flex-column justify-content-center m-3"
     >
-      <span class="tk-following__user--username">badbunny <i class="tk-following__user--check bi bi-check-circle-fill px-1"></i></span>
-      <span class="tk-following__user--name">Bad Bunny</span>
+      <span class="tk-following__user--username"
+        >{{ item.name }}
+        <i class="tk-following__user--check bi bi-check-circle-fill px-1"></i
+      ></span>
+      <span class="tk-following__user--name">{{ item.species }}</span>
     </div>
   </div>
 </div>

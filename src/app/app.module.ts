@@ -6,21 +6,23 @@ import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 import { ComponentsModule } from './components/components.module';
 import { environment } from 'src/environments/environment';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
-    PagesModule
+    PagesModule,
+    HttpClientModule,
   ],
-  providers: [{
-    provide: 'environment', useValue: environment
-  }],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: 'environment',
+      useValue: environment,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

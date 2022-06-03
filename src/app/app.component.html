@@ -1,11 +1,12 @@
 <app-navbar></app-navbar>
-<div class="container px-4">
+<div class="container px-4 tk">
   <div class="row mt-4">
     <div class="col-4">
       <app-navigation></app-navigation>
       <hr class="tk-separator my-2" />
-
-      <app-suggestions [suggestions]="suggestedCharacters"></app-suggestions>
+      <ng-container *ngIf="suggestedCharacters.length">
+        <app-suggestions [suggestions]="suggestedCharacters"></app-suggestions>
+      </ng-container>
 
       <hr class="tk-separator my-2" />
 

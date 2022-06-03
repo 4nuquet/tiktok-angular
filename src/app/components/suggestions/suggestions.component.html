@@ -1,18 +1,32 @@
-<div class="tk-following" *ngIf="suggestions">
-  <div class="tk-following__title mt-4 mb-1">Cuentas sugeridas</div>
-  <div *ngFor="let item of suggestions" class="d-flex flex-row">
-    <span class="tk-following__avatar d-flex align-items-center">
-      <img [src]="item.image" alt="" srcset="" />
-    </span>
-
+<div
+  class="tk-following"
+  *ngIf="suggestions"
+  [ngClass]="{ 'tk-following__more-content': !showMaxSuggestions }"
+>
+  <div class="tk-following__title mt-1 mb-1">Cuentas sugeridas</div>
+  <ng-container *ngFor="let item of suggestions; let quantity = index">
     <div
-      class="tk-following__user d-flex flex-column justify-content-center m-3"
+      *ngIf="quantity <= maxSuggestions"
+      class="tk-following__suggestion d-flex flex-row"
     >
-      <span class="tk-following__user--username"
-        >{{ item.name }}
-        <i class="tk-following__user--check bi bi-check-circle-fill px-1"></i
-      ></span>
-      <span class="tk-following__user--name">{{ item.species }}</span>
+      <span class="tk-following__avatar d-flex align-items-center">
+        <img [src]="item.image" alt="" />
+      </span>
+
+      <div
+        class="tk-following__user d-flex flex-column justify-content-center m-3"
+      >
+        <span class="tk-following__user--username"
+          >{{ item.name }}
+          <i class="tk-following__user--check bi bi-check-circle-fill px-1"></i
+        ></span>
+        <span class="tk-following__user--name">{{ item.species }}</span>
+      </div>
     </div>
+  </ng-container>
+  <div class="tk-following__show-more mt-1 my-2">
+    <span (click)="showMoreSuggestions()">{{
+      this.showMaxSuggestions ? "Mostrar mas" : "Mostrar menos"
+    }}</span>
   </div>
 </div>

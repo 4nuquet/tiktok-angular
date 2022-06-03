@@ -7,10 +7,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SuggestionsComponent implements OnInit {
   @Input() suggestions: any;
+  maxSuggestions = 5;
+  showMaxSuggestions = true;
 
   constructor() {}
 
   ngOnInit(): void {
     console.log('desde suggestions', this.suggestions);
+  }
+
+  showMoreSuggestions() {
+    if (!this.showMaxSuggestions) {
+      this.maxSuggestions = 5;
+    } else {
+      this.maxSuggestions = 15;
+    }
+    this.showMaxSuggestions = !this.showMaxSuggestions;
   }
 }

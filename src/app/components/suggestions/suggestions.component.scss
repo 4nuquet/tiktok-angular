@@ -1,33 +1,50 @@
-@import '../../../assets/theme.scss';
+@import "../../../assets/theme.scss";
 
-.tk-following{
-
-  &__title{
-    font-size: $tk-font-tiny;
+.tk-following {
+  &__title {
+    font-size: $tk-font-tiny2;
     color: rgba(22, 24, 35, 0.75);
     font-weight: 600;
   }
+  &__more-content {
+    height: 50%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+  }
+  &__suggestion {
+    width: 100%;
+    height: 3.5rem;
+  }
 
-  &__avatar{
-    img{
+  &__avatar {
+    img {
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
     }
   }
-  &__user{
-    &--username{
+  &__user {
+    &--username {
       font-size: $tk-font-normal;
       font-weight: 700;
     }
-    &--name{
-      margin-top: -.2rem;;
+    &--name {
+      margin-top: -0.2rem;
       font-size: $tk-font-smallest;
-      color: $tk-gray;
+      color: $tk-gray2;
     }
 
-    &--check{
+    &--check {
       color: rgb(32 213 236);
     }
+  }
+
+  &__show-more span {
+    font-size: $tk-font-tiny2;
+    color: $tk-rojo;
+    font-weight: 600;
+    cursor: pointer;
   }
 }

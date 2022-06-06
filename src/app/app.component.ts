@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostsService } from './services/posts.service';
 import {
   SingleCharacter,
   SuggestionService,
@@ -13,10 +14,14 @@ export class AppComponent implements OnInit {
   title = 'tiktok-angular';
   suggestedCharacters: SingleCharacter[] = [];
 
-  constructor(private suggestionService: SuggestionService) {}
+
+  constructor(
+    private suggestionService: SuggestionService,
+  ) {}
 
   ngOnInit(): void {
     this.getAllSuggestions();
+
   }
 
   getAllSuggestions() {

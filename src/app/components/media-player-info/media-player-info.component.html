@@ -1,4 +1,4 @@
-<div class="tk-player-info py-0">
+<div class="tk-player-info py-0" *ngIf="posts">
   <div class="d-flex flex-row">
     <div class="tk-player-info__avatar d-flex align-items-center">
       <img
@@ -13,12 +13,15 @@
         <span class="tk-player-info__user--username">BadBunny</span> &nbsp;
         <span class="tk-player-info__user--name">Bad Bunny</span>
         <div class="ms-auto">
-          <button class="tk-player-info__user--follow btn btn-outline-dark fw-bold px-4 py-1">Seguir</button>
+          <button
+            class="tk-player-info__user--follow btn btn-outline-dark fw-bold px-4 py-1"
+          >
+            Seguir
+          </button>
         </div>
       </div>
       <div>
-        Parte 4 #tumbapuertas🤑🤙 #bajarejas😾 #fypシ #parati #viral #sigueme
-        #comparte
+        {{ posts.title }}
       </div>
 
       <div class="d-flex align-items-center mt-0">

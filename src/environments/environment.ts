@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   rickAndMorty: 'https://rickandmortyapi.com/api',
+  dummyJson: 'https://dummyjson.com'
 };
 
 /*

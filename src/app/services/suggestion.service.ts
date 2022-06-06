@@ -16,6 +16,12 @@ export class SuggestionService {
       `${this.environment.rickAndMorty}/character`
     );
   }
+
+  getSingleCharacter(id: number){
+    return this.http.get<SuggestionsCharacters>(
+      `${this.environment.rickAndMorty}/character/${id}`
+    );
+  }
 }
 
 export interface SuggestionsCharacters {

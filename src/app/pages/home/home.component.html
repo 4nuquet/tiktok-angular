@@ -1,7 +1,9 @@
-<div class="tk-home container">
-  <div><app-media-player-info></app-media-player-info></div>
-  <div>
-    <app-media-player></app-media-player>
-    <hr class="tk-separator mt-4" />
-  </div>
+<div class="tk-home container" *ngIf="posts.length">
+  <ng-container *ngFor="let post of posts">
+    <div><app-media-player-info [posts]="post"></app-media-player-info></div>
+    <div>
+      <app-media-player></app-media-player>
+      <hr class="tk-separator mt-4" />
+    </div>
+  </ng-container>
 </div>
